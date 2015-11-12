@@ -1,0 +1,32 @@
+{
+  "name": "Intelivix",
+  "description": "Teste para possível vaga",
+  "main": "index.html",
+  "authors": [
+    "Leonardo Grillo (leonardo@grilloweb.com.br)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "teste",
+    "front-end",
+    "angular"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-bootstrap": "~0.14.3",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "angular-route": "~1.4.7"
+  }
+}
