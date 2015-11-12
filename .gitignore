@@ -1,0 +1,16 @@
+# DIVERSOS
+*.log
+.sass-cache
+
+# SISTEMA
+ehthumbs.db
+.DS_Store
+Thumbs.db
+
+# APLICACAO 
+node_modules/
+app/components/
+app/temp/
+dist/
+
+!.gitignore
