@@ -1,16 +1,7 @@
-# DIVERSOS
-*.log
-.sass-cache
-
-# SISTEMA
-ehthumbs.db
-.DS_Store
-Thumbs.db
-
-# APLICACAO 
 node_modules/
-app/components/
-app/temp/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
 dist/
-
-!.gitignore
