@@ -3,10 +3,10 @@
 
   angular
     .module('testeIntelivix')
-    .controller('MainController', MainController);
+    .controller('ListagemController', ListagemController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function ListagemController($timeout, webDevTec, toastr) {
     var vm = this;
 
     vm.awesomeThings = [];

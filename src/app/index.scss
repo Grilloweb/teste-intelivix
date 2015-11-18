@@ -31,10 +31,17 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.ajuste__altura {
+.wrapper__body {
 	margin-top: 80px;
 }
 
+.col-fixed-240 {
+	width: 240px;
+}
+
+.col-offset-240 {
+	padding-left: 265px;
+}
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

@@ -6,7 +6,7 @@
    * This example is not perfect.
    * Test should check if MomentJS have been called
    */
-  describe('directive navbarEsquerdo', function() {
+  describe('directive sidebar', function() {
     // var $window;
     var vm;
     var el;
@@ -20,7 +20,7 @@
       timeInMs = new Date();
       timeInMs = timeInMs.setHours(timeInMs.getHours() - 24);
 
-      el = angular.element('<acme-navbar-esquerdo creation-date="' + timeInMs + '"></acme-navbar-esquerdo>');
+      el = angular.element('<acme-sidebar creation-date="' + timeInMs + '"></acme-sidebar>');
 
       $compile(el)($rootScope.$new());
       $rootScope.$digest();

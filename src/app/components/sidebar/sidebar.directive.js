@@ -3,17 +3,17 @@
 
   angular
     .module('testeIntelivix')
-    .directive('acmeNavbarTopo', acmeNavbarTopo);
+    .directive('acmeSidebar', acmeSidebar);
 
   /** @ngInject */
-  function acmeNavbarTopo() {
+  function acmeSidebar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbarTopo/navbarTopo.html',
+      templateUrl: 'app/components/sidebar/sidebar.html',
       scope: {
           creationDate: '='
       },
-      controller: NavbarTopoController,
+      controller: SidebarController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarTopoController(moment) {
+    function SidebarController(moment) {
       var vm = this;
 
       // "vm.creation" is avaible by directive option "bindToController: true"
