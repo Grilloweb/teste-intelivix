@@ -1,38 +1,47 @@
 (function() {
-  'use strict';
+	'use strict';
 
-  angular
-    .module('testeIntelivix')
-    .controller('ListagemController', ListagemController);
+	angular
+		.module('testeIntelivix')
+		.controller('ListagemController', ListagemController);
 
-  /** @ngInject */
-  function ListagemController($timeout, webDevTec, toastr) {
-    var vm = this;
+	/** @ngInject */
+	function ListagemController($timeout, webDevTec, toastr, processosAPI) {
+		var vm = this;
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.showToastr = showToastr;
+		vm.awesomeThings = [];
+		vm.classAnimation = '';
+		vm.showToastr = showToastr;
+		vm.processos = [];
 
-    activate();
+		function carregarProcessos() {
+			processosAPI
+				.getProcessos()
+				.success(function(data) {
+					vm.processos = data;
+				});
+		}
+		carregarProcessos();
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
+		activate();
+		function activate() {
+			getWebDevTec();
+			$timeout(function() {
+				vm.classAnimation = 'rubberBand';
+			}, 4000);
+		}
 
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
+		function showToastr() {
+			toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
+			vm.classAnimation = '';
+		}
 
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
+		function getWebDevTec() {
+			vm.awesomeThings = webDevTec.getTec();
 
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
-    }
-  }
+			angular.forEach(vm.awesomeThings, function(awesomeThing) {
+				awesomeThing.rank = Math.random();
+			});
+		}
+	}
 })();
