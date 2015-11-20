@@ -1,1 +1,23 @@
-listagem
+<h3>Listagem de processos</h3>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Processo</th>
+			<th>Autor</th>
+			<th>Recebimento</th>
+			<th>Envio</th>
+			<th>Valor</th>
+			<th><a href="">Chance</a></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="processos in listagem.processos | limitTo: 5">
+			<td>{{ processos.processo }}</td>
+			<td>{{ processos.autor }}</td>
+			<td>{{ processos.data_recebimento }}</td>
+			<td>{{ processos.data_envio }}</td>
+			<td>{{ processos.valor }}</td>
+			<td>{{ (processos.probabilidade_de_acordo - probabilidade_de_perda) / 2 }}%</td>
+		</tr>
+	</tbody>
+</table>
