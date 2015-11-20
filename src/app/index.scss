@@ -36,11 +36,17 @@ body {
 }
 
 .col-fixed-240 {
-	width: 240px;
+	width: 210px;
 }
 
 .col-offset-240 {
 	padding-left: 265px;
+}
+
+@media(max-width:991px) {
+	.col-offset-240 {
+		padding-left: 15px;
+	}
 }
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject

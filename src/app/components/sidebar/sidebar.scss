@@ -19,11 +19,12 @@
 #sidebar-wrapper {
 	z-index: 1000;
 	position: fixed;
-	width: 250px;
+	width: 225px;
 	height: 120px;
 	overflow-y: auto;
 	background: #222;
 	border-radius: 10px;
+	margin-left: 15px;
 }
 
 #page-content-wrapper {
@@ -37,7 +38,7 @@
 .sidebar-nav {
 	position: absolute;
 	top: 0;
-	width: 250px;
+	width: 225px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -79,23 +80,8 @@
 	background: none;
 }
 
-@media(min-width:768px) {
+@media(max-width:991px) {
 	#wrapper {
-		.navbar-toggle {
-			display: block;
-		}
-	}
-}
-
-@media(max-width:480px) {
-	#wrapper {
-		.navbar-toggle {
-			display: block;
-		}
-	}
-
-	.navbar-toggle-esquerdo {
-		padding: 0;
-		background: #fff;
+		display: none;
 	}
 }

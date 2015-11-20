@@ -1,10 +1,9 @@
-
 <div id="wrapper">
 	<div id="sidebar-wrapper">
 		<ul class="sidebar-nav">
-			<li class="active"><a href="#/">Dashboard</a></li>
-			<li><a href="#/listagem">Listagem</a></li>
-			<li><a href="#/formulario">Formulário</a></li>
+			<li ng-class="{'active' : linkMenuCurrent() == 'dashboard'}"><a href="#/" ng-click="linkMenu('dashboard')">Dashboard</a></li>
+			<li ng-class="{'active' : linkMenuCurrent() == 'listagem'}"><a ng-href="#/listagem" ng-click="linkMenu('listagem')">Listagem</a></li>
+			<li ng-class="{'active' : linkMenuCurrent() == 'formulario'}"><a ng-href="#/formulario" ng-click="linkMenu('formulario')">Formulário</a></li>
 		</ul>
 	</div>
 </div>

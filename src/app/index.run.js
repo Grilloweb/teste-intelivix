@@ -1,14 +1,20 @@
 (function() {
-  'use strict';
+	'use strict';
 
-  angular
-    .module('testeIntelivix')
-    .run(runBlock);
+	angular
+		.module('testeIntelivix')
+		.run(runBlock)
+		.run(rootScope);
 
-  /** @ngInject */
-  function runBlock($log) {
+	/** @ngInject */
+	function runBlock($log) {
+		$log.debug('runBlock end');
+	}
 
-    $log.debug('runBlock end');
-  }
+	function rootScope($rootScope) {
+		$rootScope.currentMenu = "";
+	}
+
+
 
 })();

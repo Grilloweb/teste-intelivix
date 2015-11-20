@@ -1,10 +1,10 @@
 /* global malarkey:false, moment:false */
 (function() {
-  'use strict';
+	'use strict';
 
-  angular
-    .module('testeIntelivix')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
+	angular
+		.module('testeIntelivix')
+		.constant('malarkey', malarkey)
+		.constant('moment', moment);
 
 })();
