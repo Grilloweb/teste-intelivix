@@ -21,14 +21,14 @@
 		return directive;
 
 		/** @ngInject */
-		function SidebarController(moment, $rootScope, $scope) {
+		function SidebarController(moment, $rootScope) {
 			var vm = this;
 
-			$scope.linkMenu = function(view) {
+			vm.linkMenu = function(view) {
 				$rootScope.currentMenu = view;
 			};
 
-			$scope.linkMenuCurrent = function() {
+			vm.linkMenuCurrent = function() {
 				return $rootScope.currentMenu;
 			};
 

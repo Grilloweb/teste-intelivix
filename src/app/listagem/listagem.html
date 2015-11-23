@@ -7,17 +7,17 @@
 			<th>Recebimento</th>
 			<th>Envio</th>
 			<th>Valor</th>
-			<th><a href="">Chance</a></th>
+			<th><a href="" ng-click="listagem.sort()">Chance</a></th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="processos in listagem.processos | limitTo: 5">
+		<tr ng-repeat="processos in listagem.processos | limitTo: listagem.limitPerPage | orderBy: listagem.filterSumValues:listagem.reverse">
 			<td>{{ processos.processo }}</td>
 			<td>{{ processos.autor }}</td>
-			<td>{{ processos.data_recebimento }}</td>
-			<td>{{ processos.data_envio }}</td>
+			<td>{{ processos.data_recebimento | date: listagem.dateFilter }}</td>
+			<td>{{ processos.data_envio | date: listagem.dateFilter }}</td>
 			<td>{{ processos.valor }}</td>
-			<td>{{ (processos.probabilidade_de_acordo - probabilidade_de_perda) / 2 }}%</td>
+			<td>{{ listagem.calcValues(processos) }}</td>
 		</tr>
 	</tbody>
 </table>

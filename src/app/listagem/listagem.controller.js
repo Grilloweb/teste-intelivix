@@ -8,8 +8,9 @@
 	/** @ngInject */
 	function ListagemController(processosAPI) {
 		var vm = this;
-
-		vm.processos = [];
+		vm.reverse = true;
+		vm.limitPerPage = 20;
+		vm.dateFilter = "dd/MM/yyyy";
 
 		carregarProcesso();
 		function carregarProcesso() {
@@ -19,5 +20,18 @@
 					vm.processos = data;
 				});
 		}
+
+		vm.sort = function(){
+			vm.reverse = !vm.reverse;
+		}
+
+		vm.filterSumValues = function(processos) {
+			return (processos.probabilidade_de_acordo + processos.probabilidade_de_perda) / 2;
+		}
+
+		vm.calcValues = function(processos) {
+			return (processos.probabilidade_de_acordo + processos.probabilidade_de_perda) / 2;
+		}
+
 	}
 })();

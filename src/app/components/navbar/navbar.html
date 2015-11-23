@@ -18,9 +18,9 @@
 			<div class="row">
 				<div class="col-md-12  collapse  navbar-collapse" ng-class="!flagStatusMenu ? 'collapse' : ''">
 					<ul class="nav navbar-nav">
-						<li ng-class="{'active' : linkMenuCurrent() == 'dashboard'}"><a href="#/" ng-click="linkMenu('dashboard')">Dashboard</a></li>
-						<li ng-class="{'active' : linkMenuCurrent() == 'listagem'}"><a ng-href="#/listagem" ng-click="linkMenu('listagem')">Listagem</a></li>
-						<li ng-class="{'active' : linkMenuCurrent() == 'formulario'}"><a ng-href="#/formulario" ng-click="linkMenu('formulario')">Formulário</a></li>
+						<li ng-class="{'active' : vm.linkMenuCurrent() == 'dashboard'}"><a href="#/" ng-click="vm.linkMenu('dashboard')">Dashboard</a></li>
+						<li ng-class="{'active' : vm.linkMenuCurrent() == 'listagem'}"><a ng-href="#/listagem" ng-click="vm.linkMenu('listagem')">Listagem</a></li>
+						<li ng-class="{'active' : vm.linkMenuCurrent() == 'formulario'}"><a ng-href="#/formulario" ng-click="vm.linkMenu('formulario')">Formulário</a></li>
 					</ul>
 				</div>
 			</div>

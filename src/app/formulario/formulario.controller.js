@@ -7,5 +7,11 @@
 
 	/** @ngInject */
 	function FormularioController() {
+		var vm = this;
+		vm.mFormulario = {};
+
+		vm.save = function(data) {
+			console.log( JSON.stringify( data, null, 2 ));
+		};
 	}
 })();

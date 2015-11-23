@@ -22,14 +22,14 @@
 		return directive;
 
 		/** @ngInject */
-		function NavbarController(moment, $rootScope, $scope) {
+		function NavbarController(moment, $rootScope) {
 			var vm = this;
 
-			$scope.linkMenu = function(view) {
+			vm.linkMenu = function(view) {
 				$rootScope.currentMenu = view;
 			};
 
-			$scope.linkMenuCurrent = function() {
+			vm.linkMenuCurrent = function() {
 				return $rootScope.currentMenu;
 			};
 
