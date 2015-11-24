@@ -1,3 +1,7 @@
+/* DIRETIVA barsChart
+ * ele auxilia na criação dos gráficos em barra
+ */
+
 angular.module('testeIntelivix').
 	directive('barsChart', function () {
 		var directiveDefinitionObject = {

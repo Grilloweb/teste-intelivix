@@ -1,3 +1,6 @@
+/* MODULOS DO PROJETO
+ * @autor leonardo grillo
+ */
 (function() {
   'use strict';
 

@@ -7,6 +7,9 @@
 
 	/** @ngInject */
 	function relatorioAPI($http) {
+		/* METODO _getRelatorio
+		 * retorna o get do json relatorio.json
+		 */
 		var _getRelatorio = function() {
 			return $http.get("/assets/json/relatorio.json");
 		};

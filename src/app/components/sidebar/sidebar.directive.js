@@ -21,19 +21,19 @@
 		return directive;
 
 		/** @ngInject */
-		function SidebarController(moment, $rootScope) {
+		function SidebarController($rootScope) {
+			//atributos
 			var vm = this;
 
+			//navega no meu
 			vm.linkMenu = function(view) {
 				$rootScope.currentMenu = view;
 			};
 
+			//atualiza qual o menu ativo
 			vm.linkMenuCurrent = function() {
 				return $rootScope.currentMenu;
 			};
-
-			// "vm.creation" is avaible by directive option "bindToController: true"
-			vm.relativeDate = moment(vm.creationDate).fromNow();
 		}
 	}
 
