@@ -1,1 +1,35 @@
-dashboard
+<h3 class="title">Dashboard</h3>
+<div class="row">
+	<div class="col-md-8">
+		<h4>Ultimos 10 registros ativos</h4>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>UF</th>
+					<th>Comarca</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="relatorio in main.relatorios | orderBy: 'data':true | limitTo: 10">
+					<td>{{ relatorio.data | date:"dd/MM/yyyy" }}</td>
+					<td>{{ relatorio.uf }}</td>
+					<td>{{ relatorio.comarca }}</td>
+					<td>{{ relatorio.valor }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-md-4">
+		<div class="row relatorio-estado">
+			<h4>Registros ativos por estado</h4>
+			<bars-chart chart-data="main.relatorioEstado"></bars-chart>
+		</div>
+		<div class="row relatorio-valor-estado">
+			<h4>Valores ativos por estado</h4>
+			<bars-chart chart-data="main.relatorioValorEstado"></bars-chart>
+		</div>
+	</div>
+</div>
+
