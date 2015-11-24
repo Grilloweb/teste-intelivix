@@ -2,7 +2,7 @@
 Programa para testar meus conhecimentos sobre HTML, CSS, JAVASCRIPT, ANGULAR, etc.
 
 Inicializando o projeto
-- O projeto necessita da instalação prévia do GIT, NPM e Bower.
+OBS.: O projeto necessita da instalação prévia do GIT, NPM e Bower.
 
 1. Clone o repositório em um diretório de sua escolha;
 2. No terminal, acesse o diretório do projeto e digite: "npm install", o processo pode levar alguns minutos;
